@@ -1,10 +1,7 @@
 const CONFIG = {
-
   whatsappNumber: "557382444882",
   whatsappDisplay: "(73) 8244-4882",
-
   email: "hipersolenergiasolar@gmail.com",
-
   calc: {
     tariff: 0.95,
     sunHours: 5.5,
@@ -58,13 +55,12 @@ onScroll();
 
 const nav = $("#nav");
 const menuToggle = $("#menuToggle");
-const overlay = document.createElement("div");
-overlay.className = "nav-overlay";
-document.body.appendChild(overlay);
+const overlay = $("#navOverlay");
 
 function setMenu(open) {
   nav.classList.toggle("is-open", open);
   overlay.classList.toggle("is-open", open);
+  header.classList.toggle("is-scrolled", open || window.scrollY > 24);
   menuToggle.setAttribute("aria-expanded", String(open));
   menuToggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
   document.body.style.overflow = open ? "hidden" : "";
@@ -96,7 +92,6 @@ const revealObserver = new IntersectionObserver((entries, obs) => {
 }, { threshold: 0.12 });
 
 $$(".reveal").forEach((el, i) => {
-
   el.style.transitionDelay = `${(i % 4) * 80}ms`;
   revealObserver.observe(el);
 });
