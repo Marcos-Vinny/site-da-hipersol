@@ -1,32 +1,28 @@
-
-
 const CONFIG = {
- 
+
   whatsappNumber: "557382444882",
   whatsappDisplay: "(73) 8244-4882",
 
   email: "hipersolenergiasolar@gmail.com",
 
-  
   calc: {
-    tariff: 0.95,            
-    sunHours: 5.5,          
-    performance: 0.80,      
-    panelWatts: 620,     
-    minPanels: 5,   
-    costPerKwp: 4300,        
-    minFeeKwh: {             
+    tariff: 0.95,
+    sunHours: 5.5,
+    performance: 0.80,
+    panelWatts: 620,
+    minPanels: 4,
+    costPerKwp: 4300,
+    minFeeKwh: {
       residencial: 30,
       comercial: 50,
       rural: 50,
       industrial: 100
     },
-    yearlyTariffIncrease: 0.07, 
-    degradation: 0.007,         
+    yearlyTariffIncrease: 0.07,
+    degradation: 0.007,
     lifetimeYears: 25
   }
 };
-
 
 const $  = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
@@ -34,9 +30,9 @@ const brl = (n) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL
 
 document.documentElement.classList.add("js");
 
- 
 function whatsappUrl(text = "") {
-  const base = `https://wa.me/${CONFIG.whatsappNumber}`;
+  const number = CONFIG.whatsappNumber.replace(/\D/g, "");
+  const base = `https://wa.me/${number}`;
   return text ? `${base}?text=${encodeURIComponent(text)}` : base;
 }
 
@@ -51,9 +47,7 @@ $$("[data-email-link]").forEach((el) => {
   el.textContent = CONFIG.email;
 });
 
-
 $("#year").textContent = new Date().getFullYear();
-
 
 const header = $("#header");
 function onScroll() {
@@ -61,7 +55,6 @@ function onScroll() {
 }
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
-
 
 const nav = $("#nav");
 const menuToggle = $("#menuToggle");
@@ -82,7 +75,6 @@ $$("a", nav).forEach((a) => a.addEventListener("click", () => setMenu(false)));
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 window.matchMedia("(min-width: 960px)").addEventListener("change", (e) => { if (e.matches) setMenu(false); });
 
- 
 const sections = $$("main section[id]");
 const navLinks = $$(".nav__list a");
 const spy = new IntersectionObserver((entries) => {
@@ -93,7 +85,6 @@ const spy = new IntersectionObserver((entries) => {
   });
 }, { rootMargin: "-45% 0px -50% 0px" });
 sections.forEach((s) => spy.observe(s));
-
 
 const revealObserver = new IntersectionObserver((entries, obs) => {
   entries.forEach((entry) => {
@@ -109,7 +100,6 @@ $$(".reveal").forEach((el, i) => {
   el.style.transitionDelay = `${(i % 4) * 80}ms`;
   revealObserver.observe(el);
 });
-
 
 function animateCounter(el) {
   const target = Number(el.dataset.count);
@@ -133,7 +123,6 @@ const counterObserver = new IntersectionObserver((entries, obs) => {
 }, { threshold: 0.6 });
 $$("[data-count]").forEach((el) => counterObserver.observe(el));
 
-
 const billInput = $("#bill");
 const billRange = $("#billRange");
 const calcType  = $("#calcType");
@@ -150,16 +139,17 @@ function calculate() {
   const type = calcType.value;
 
   const minFeeKwh = c.minFeeKwh[type];
-const consumption = Math.max(bill / c.tariff - minFeeKwh, 0);
-const kwp = consumption / (30 * c.sunHours * c.performance);
-  const panels = kwp > 0 ? Math.max(Math.ceil((kwp * 1000) / c.panelWatts), c.minPanels) : 0;
+  const consumption = Math.max(bill / c.tariff - minFeeKwh, 0);
+  const kwp = consumption / (30 * c.sunHours * c.performance);
+  const panels = bill > 0
+    ? Math.max(Math.ceil((kwp * 1000) / c.panelWatts), c.minPanels)
+    : 0;
   const realKwp = (panels * c.panelWatts) / 1000;
 
-  const minFee = c.minFeeKwh[type] * c.tariff;                      
-  const monthly = Math.max(bill - minFee, 0);                     
+  const minFee = minFeeKwh * c.tariff;
+  const monthly = Math.max(bill - minFee, 0);
   const invest = realKwp * c.costPerKwp;
 
-  
   let lifetime = 0, accumulated = 0, payback = null;
   for (let year = 1; year <= c.lifetimeYears; year++) {
     const yearly = monthly * 12 * Math.pow(1 + c.yearlyTariffIncrease, year - 1) * Math.pow(1 - c.degradation, year - 1);
@@ -178,7 +168,6 @@ const kwp = consumption / (30 * c.sunHours * c.performance);
   $("#resInvest").textContent  = invest ? brl(invest) : "—";
   $("#resPayback").textContent = payback ? `${payback.toFixed(1).replace(".", ",")} anos` : "—";
 
-  
   const formBill = $("#formBill");
   if (formBill && !formBill.dataset.touched) formBill.value = bill || "";
   const formType = $("#type");
@@ -203,7 +192,6 @@ $("#calcForm").addEventListener("submit", (e) => e.preventDefault());
 updateRangeFill();
 calculate();
 
-
 $$("[data-interest]").forEach((link) => {
   link.addEventListener("click", () => {
     const select = $("#type");
@@ -214,7 +202,6 @@ $$("[data-interest]").forEach((link) => {
 $("#type").addEventListener("change", (e) => { e.target.dataset.touched = "1"; });
 $("#formBill").addEventListener("input", (e) => { e.target.dataset.touched = "1"; });
 
-
 $$(".faq__item").forEach((item) => {
   const btn = $(".faq__q", item);
   const panel = $(".faq__a", item);
@@ -222,7 +209,6 @@ $$(".faq__item").forEach((item) => {
   btn.addEventListener("click", () => {
     const isOpen = item.classList.contains("is-open");
 
-    
     $$(".faq__item.is-open").forEach((other) => {
       if (other !== item) {
         other.classList.remove("is-open");
@@ -240,10 +226,8 @@ window.addEventListener("resize", () => {
   $$(".faq__item.is-open .faq__a").forEach((p) => { p.style.maxHeight = `${p.scrollHeight}px`; });
 });
 
-
 const form = $("#contactForm");
 const phoneInput = $("#phone");
-
 
 phoneInput.addEventListener("input", () => {
   let d = phoneInput.value.replace(/\D/g, "").slice(0, 11);
@@ -299,7 +283,6 @@ form.addEventListener("submit", (e) => {
 
   window.open(whatsappUrl(lines.join("\n")), "_blank", "noopener");
 });
-
 
 $("#calcCta").addEventListener("click", () => {
   const msg = $("#message");
