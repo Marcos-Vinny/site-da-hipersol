@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hiper Sol | Energia Solar que reduz sua conta de luz</title>
+  <meta name="description" content="Hiper Sol: projetos de energia solar fotovoltaica para residências, comércios, indústrias e propriedades rurais. Faça uma simulação gratuita e economize até 90% na conta de luz.">
+  <meta name="theme-color" content="#0b1b33">
+
+ 
+  <meta property="og:title" content="Hiper Sol | Energia Solar">
+  <meta property="og:description" content="Reduza sua conta de luz em até 90% com energia solar fotovoltaica.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='14' fill='%23ffb400'/%3E%3Cg stroke='%23ffb400' stroke-width='5' stroke-linecap='reound'%3E%3Cpath d='M32 5v8M32 51v8M5 32h8M51 32h8M13 13l6 6M45 45l6 6M13 51l6-6M45 19l6-6'/%3E%3C/g%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Hiper Sol - início">
+        <svg class="logo__icon" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="10" fill="#ffb400"/>
+          <g stroke="#ffb400" stroke-width="3.5" stroke-linecap="round">
+            <path d="M24 3v6M24 39v6M3 24h6M39 24h6M9.2 9.2l4.2 4.2M34.6 34.6l4.2 4.2M9.2 38.8l4.2-4.2M34.6 13.4l4.2-4.2"/>
+          </g>
+        </svg>
+        <span class="logo__text">Hiper<strong>Sol</strong></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#vantagens">Vantagens</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#simulador">Simulador</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#depoimentos">Clientes</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--primary nav__cta">Orçamento grátis</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+   
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="badge">☀️ Energia limpa, economia real</span>
+          <h1>Transforme a luz do sol em <span class="highlight">economia na sua conta</span></h1>
+          <p class="hero__text">Projetamos e instalamos sistemas de energia solar sob medida para sua casa, empresa ou propriedade. Reduza sua conta de luz em até <strong>90%</strong> e valorize seu imóvel.</p>
+          <div class="hero__actions">
+            <a href="#simulador" class="btn btn--primary btn--lg">Simular minha economia</a>
+            <a href="#contato" class="btn btn--ghost btn--lg">Falar com especialista</a>
+          </div>
+          <ul class="hero__checks">
+            <li>Projeto 100% personalizado</li>
+            <li>Homologação na concessionária</li>
+            <li>Garantia de até 25 anos</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="sun-card">
+            <svg viewBox="0 0 420 380" class="sun-card__svg" role="img">
+              <defs>
+                <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#ffd54a"/>
+                  <stop offset="60%" stop-color="#ffb400"/>
+                  <stop offset="100%" stop-color="#ff8a00" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#2a5cb8"/>
+                  <stop offset="100%" stop-color="#0f2a5c"/>
+                </linearGradient>
+              </defs>
+              <circle cx="300" cy="90" r="90" fill="url(#sunGlow)" class="sun-pulse"/>
+              <circle cx="300" cy="90" r="42" fill="#ffc107"/>
+              <g class="sun-rays" stroke="#ffc107" stroke-width="6" stroke-linecap="round" transform-origin="300 90">
+                <path d="M300 22v-14M300 158v14M232 90h-14M368 90h14M252 42l-10-10M348 138l10 10M252 138l-10 10M348 42l10-10"/>
+              </g>
+              <g transform="translate(40 190) skewX(-18)">
+                <rect width="300" height="150" rx="10" fill="url(#panel)" stroke="#9ec1ff" stroke-width="3"/>
+                <g stroke="#9ec1ff" stroke-opacity=".55" stroke-width="2">
+                  <path d="M75 0v150M150 0v150M225 0v150M0 50h300M0 100h300"/>
+                </g>
+                <rect width="300" height="150" rx="10" fill="#fff" opacity=".07"/>
+              </g>
+              <path d="M130 345h140" stroke="#9ec1ff" stroke-width="6" stroke-linecap="round"/>
+              <path d="M160 330v15M240 330v15" stroke="#9ec1ff" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+
+            <div class="float-card float-card--a">
+              <span class="float-card__label">Economia mensal</span>
+              <strong>Faça já seu projeto</strong>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="stats" aria-label="Números da Hiper Sol">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <strong class="stat__num" data-count="500" data-prefix="+">0</strong>
+          <span>projetos instalados</span>
+        </div>
+        <div class="stat reveal">
+          <strong class="stat__num" data-count="90" data-suffix="%">0</strong>
+          <span>de economia na conta</span>
+        </div>
+        <div class="stat reveal">
+          <strong class="stat__num" data-count="25" data-suffix=" anos">0</strong>
+          <span>de garantia nos painéis</span>
+        </div>
+        <div class="stat reveal">
+          <strong class="stat__num" data-count="98" data-suffix="%">0</strong>
+          <span>de clientes satisfeitos</span>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="section" id="vantagens">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Por que energia solar?</span>
+          <h2>Vantagens de gerar a própria energia</h2>
+          <p>Um investimento que se paga e continua rendendo por décadas.</p>
+        </header>
+
+        <div class="cards cards--3">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Economia imediata</h3>
+            <p>Já no primeiro mês, a conta de luz cai drasticamente. Você paga apenas a taxa mínima da concessionária.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </div>
+            <h3>Retorno garantido</h3>
+            <p>O sistema se paga em poucos anos e continua gerando economia por mais de 25 anos de vida útil.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+            </div>
+            <h3>Valorização do imóvel</h3>
+            <p>Imóveis com energia solar são mais valorizados e mais atrativos no mercado de venda e locação.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22c4-3 7-6.5 7-11a7 7 0 0 0-14 0c0 4.5 3 8 7 11z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            </div>
+            <h3>Sustentabilidade</h3>
+            <p>Energia limpa e renovável, sem emissão de poluentes. Você contribui com o planeta e com as próximas gerações.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Proteção contra reajustes</h3>
+            <p>Fique protegido dos aumentos constantes na tarifa de energia e das bandeiras tarifárias.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6 2.6-2.2z"/></svg>
+            </div>
+            <h3>Baixa manutenção</h3>
+            <p>Sistema silencioso, durável e sem partes móveis. Acompanhe a geração pelo celular em tempo real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section section--alt" id="solucoes">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Nossas soluções</span>
+          <h2>Energia solar para cada necessidade</h2>
+          <p>Do projeto à instalação, cuidamos de tudo para você.</p>
+        </header>
+
+        <div class="cards cards--4">
+          <article class="solution reveal">
+            <span class="solution__tag">Residencial</span>
+            <h3>Para sua casa</h3>
+            <p>Sistemas dimensionados para o consumo da sua família, com instalação rápida e limpa.</p>
+            <a href="#contato" class="link-arrow" data-interest="Residencial">Quero para minha casa →</a>
+          </article>
+
+          <article class="solution reveal">
+            <span class="solution__tag">Comercial</span>
+            <h3>Para seu negócio</h3>
+            <p>Reduza custos fixos de lojas, escritórios, clínicas e restaurantes e aumente sua margem.</p>
+            <a href="#contato" class="link-arrow" data-interest="Comercial">Quero para minha empresa →</a>
+          </article>
+
+          <article class="solution reveal">
+            <span class="solution__tag">Rural</span>
+            <h3>Para o campo</h3>
+            <p>Irrigação, ordenha, resfriamento e bombeamento com energia solar. Menos custo, mais produtividade.</p>
+            <a href="#contato" class="link-arrow" data-interest="Rural">Quero para minha propriedade →</a>
+          </article>
+
+          <article class="solution reveal">
+            <span class="solution__tag">Industrial</span>
+            <h3>Para a indústria</h3>
+            <p>Projetos de maior porte e usinas solares com alto retorno e previsibilidade de custos.</p>
+            <a href="#contato" class="link-arrow" data-interest="Industrial">Quero para minha indústria →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section simulator" id="simulador">
+      <div class="container simulator__grid">
+        <div class="simulator__intro reveal">
+          <span class="eyebrow eyebrow--light">Simulador gratuito</span>
+          <h2>Quanto você pode economizar?</h2>
+          <p>Informe o valor médio da sua conta de luz e veja uma estimativa do sistema ideal e da sua economia.</p>
+          <p class="simulator__note">* Estimativa baseada em médias de mercado. O valor final depende de visita técnica e projeto personalizado.</p>
+        </div>
+
+        <div class="simulator__box reveal">
+          <form id="calcForm" novalidate>
+            <label for="bill">Valor médio da conta de luz (R$/mês)</label>
+            <div class="range-row">
+              <input type="range" id="billRange" min="100" max="5000" step="50" value="400" aria-label="Ajustar valor da conta">
+              <div class="money-input">
+                <span>R$</span>
+                <input type="number" id="bill" min="50" max="100000" step="10" value="400" inputmode="numeric">
+              </div>
+            </div>
+
+            <label for="calcType">Tipo de imóvel</label>
+            <select id="calcType">
+              <option value="residencial">Residencial</option>
+              <option value="comercial">Comercial</option>
+              <option value="rural">Rural</option>
+              <option value="industrial">Industrial</option>
+            </select>
+          </form>
+
+          <div class="results" id="results" aria-live="polite">
+            <div class="result result--big">
+              <span>Economia estimada por mês</span>
+              <strong id="resMonthly">R$ 0</strong>
+            </div>
+            <div class="result">
+              <span>Economia em 25 anos</span>
+              <strong id="resLife">R$ 0</strong>
+            </div>
+            <div class="result">
+              <span>Potência do sistema</span>
+              <strong id="resKwp">0 kWp</strong>
+            </div>
+            <div class="result">
+              <span>Painéis solares</span>
+              <strong id="resPanels">0</strong>
+            </div>
+            <div class="result">
+              <span>Investimento aprox.</span>
+              <strong id="resInvest">R$ 0</strong>
+            </div>
+            <div class="result">
+              <span>Retorno (payback)</span>
+              <strong id="resPayback">0 anos</strong>
+            </div>
+          </div>
+
+          <a href="#contato" class="btn btn--primary btn--block" id="calcCta">Quero essa proposta</a>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Passo a passo</span>
+          <h2>Como funciona o processo</h2>
+          <p>Simples, rápido e sem dor de cabeça.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">1</span>
+            <h3>Análise e proposta</h3>
+            <p>Avaliamos seu consumo e entregamos uma proposta clara, com valores e prazos.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">2</span>
+            <h3>Projeto técnico</h3>
+            <p>Nossos engenheiros dimensionam o sistema ideal e cuidam de toda a documentação.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">3</span>
+            <h3>Instalação</h3>
+            <p>Equipe qualificada instala tudo com segurança, rapidez e acabamento profissional.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">4</span>
+            <h3>Homologação</h3>
+            <p>Cuidamos da aprovação junto à concessionária até o sistema ser conectado à rede.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">5</span>
+            <h3>Economia e suporte</h3>
+            <p>Você começa a economizar e conta com nosso acompanhamento e suporte pós-venda.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+   
+    <section class="section section--alt" id="depoimentos">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Clientes Hiper Sol</span>
+          <h2>Quem instalou, recomenda</h2>
+          <p>Veja o que dizem os clientes que já estão economizando.</p>
+        </header>
+
+        <div class="cards cards--3">
+          <figure class="testimonial reveal">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Minha conta caiu de quase R$ 600 para pouco mais de R$ 50. A equipe foi pontual e muito atenciosa em todas as etapas.”</blockquote>
+            <figcaption><strong>Carlos M.</strong><span>Residencial</span></figcaption>
+          </figure>
+
+          <figure class="testimonial reveal">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Instalamos na loja e o retorno foi mais rápido do que esperávamos. Hoje a energia deixou de ser um peso no caixa.”</blockquote>
+            <figcaption><strong>Fernanda S.</strong><span>Comercial</span></figcaption>
+          </figure>
+
+          <figure class="testimonial reveal">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Na fazenda, o sistema solar reduziu muito o custo da irrigação. Atendimento sério e projeto bem feito.”</blockquote>
+            <figcaption><strong>José A.</strong><span>Rural</span></figcaption>
+          </figure>
+        </div>
+        <p class="muted center small">* Depoimentos ilustrativos. Substitua por relatos reais de seus clientes.</p>
+      </div>
+    </section>
+
+    
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2>Tire suas dúvidas</h2>
+        </header>
+
+        <div class="faq" id="faqList">
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Funciona em dias nublados ou à noite?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>Em dias nublados o sistema continua gerando, em menor quantidade. À noite, você usa a energia da rede e os créditos acumulados durante o dia, que são abatidos na sua conta.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Quanto tempo leva para instalar?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>A instalação física costuma levar de 1 a 3 dias, dependendo do porte. O prazo total, com projeto e homologação da concessionária, varia conforme cada caso.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Preciso de baterias?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>Na maioria dos casos, não. O sistema conectado à rede (on-grid) usa a rede elétrica como "bateria", gerando créditos de energia. Baterias são indicadas apenas em situações específicas.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Qual a durabilidade e a garantia?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>Os painéis solares têm vida útil superior a 25 anos, com garantia de desempenho do fabricante. Os inversores têm garantia própria, e nossa instalação conta com garantia de serviço.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Existe financiamento?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>Sim. Trabalhamos com opções de financiamento em que a parcela costuma ser menor ou próxima da economia na conta de luz. Fale com a gente para simular.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Preciso fazer manutenção?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>A manutenção é mínima: basicamente limpezas periódicas e inspeções. Oferecemos suporte e acompanhamento da geração para garantir o melhor desempenho.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <span class="eyebrow eyebrow--light">Orçamento sem compromisso</span>
+          <h2>Vamos começar a sua economia?</h2>
+          <p>Preencha o formulário e nossa equipe retorna pelo WhatsApp com uma proposta personalizada.</p>
+
+          <ul class="contact__list">
+            <li>
+              <span class="contact__ico" aria-hidden="true">📞</span>
+              <div><strong>Telefone / WhatsApp</strong><a href="#" data-whatsapp-link>(00) 00000-0000</a></div>
+            </li>
+            <li>
+              <span class="contact__ico" aria-hidden="true">✉️</span>
+              <div><strong>E-mail</strong><a href="mailto:contato@hipersol.com.br" data-email-link>contato@hipersol.com.br</a></div>
+            </li>
+            <li>
+              <span class="contact__ico" aria-hidden="true">🕗</span>
+              <div><strong>Horário</strong><span>Seg a sáb, 8h às 18h ·</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Seu nome" required>
+            <small class="error" data-error-for="name"></small>
+          </div>
+
+          <div class="field">
+            <label for="phone">WhatsApp</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+            <small class="error" data-error-for="phone"></small>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="city">Cidade</label>
+              <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="Sua cidade" required>
+              <small class="error" data-error-for="city"></small>
+            </div>
+            <div class="field">
+              <label for="type">Tipo de imóvel</label>
+              <select id="type" name="type">
+                <option>Residencial</option>
+                <option>Comercial</option>
+                <option>Rural</option>
+                <option>Industrial</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="formBill">Valor médio da conta de luz (R$)</label>
+            <input type="number" id="formBill" name="bill" inputmode="numeric" min="0" placeholder="Ex.: 450">
+          </div>
+
+          <div class="field">
+            <label for="message">Mensagem (opcional)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Conte um pouco sobre o que você precisa"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block btn--lg">Solicitar orçamento pelo WhatsApp</button>
+          <p class="form__note">Seus dados são usados apenas para o contato sobre seu orçamento.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo logo--light" aria-label="Hiper Sol - início">
+          <svg class="logo__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="10" fill="#ffb400"/>
+            <g stroke="#ffb400" stroke-width="3.5" stroke-linecap="round">
+              <path d="M24 3v6M24 39v6M3 24h6M39 24h6M9.2 9.2l4.2 4.2M34.6 34.6l4.2 4.2M9.2 38.8l4.2-4.2M34.6 13.4l4.2-4.2"/>
+            </g>
+          </svg>
+          <span class="logo__text">Hiper<strong>Sol</strong></span>
+        </a>
+        <p>Soluções em energia solar fotovoltaica com projeto, instalação e suporte de ponta a ponta.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Rodapé">
+        <h4>Navegação</h4>
+        <a href="#vantagens">Vantagens</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer__nav">
+        <h4>Contato</h4>
+        <a href="#" data-whatsapp-link>WhatsApp</a>
+        <a href="mailto:contato@hipersol.com.br" data-email-link>contato@hipersol.com.br</a>
+        <span>Seg a Sex, 8h às 18h</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Hiper Sol Energia Solar. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+  <a href="#" class="whats-float" data-whatsapp-link aria-label="Falar pelo WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-1.9c1.8 1 3.800 1.500 5.600 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.100 1.200-4.300-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.500 9.800 10.200 5.200 16 5.200s10.500 4.600 10.500 10.300S21.800 25.800 16 25.800zm5.800-7.600c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-.9 1.200-.2.200-.3.200-.6.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2.100-.4 0-.5-.1-.2-.7-1.700-1-2.300-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 3.100 1.200 3.100.8 3.600.8.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
